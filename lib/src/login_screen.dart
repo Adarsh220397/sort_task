@@ -1,6 +1,7 @@
 import 'package:filter_option_task/src/home_screen.dart';
 import 'package:filter_option_task/utils/colors.dart';
 import 'package:filter_option_task/utils/global_variable.dart';
+import 'package:filter_option_task/utils/utils.dart';
 import 'package:filter_option_task/widgets/text_field_input.dart';
 import 'package:flutter/material.dart';
 
@@ -40,6 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
       setState(() {
         _isLoading = true;
       });
+      CommonUtils.instance.showSnackBar(context, "Logged In Successfully !!");
 
       await Navigator.pushAndRemoveUntil(
           context,
@@ -148,11 +150,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 GestureDetector(
-                  // onTap: () => Navigator.of(context).push(
-                  //   MaterialPageRoute(
-                  //     builder: (context) => const SignupScreen(),
-                  //   ),
-                  // ),
                   child: Container(
                     padding: const EdgeInsets.symmetric(vertical: 8),
                     child: const Text(

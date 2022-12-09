@@ -1,20 +1,16 @@
 import 'package:flutter/material.dart';
 
-// for picking up image from gallery
-// pickImage(ImageSource source) async {
-//   final ImagePicker _imagePicker = ImagePicker();
-//   XFile? _file = await _imagePicker.pickImage(source: source);
-//   if (_file != null) {
-//     return await _file.readAsBytes();
-//   }
-//   print('No Image Selected');
-// }
+class CommonUtils {
+  /// Singleton instance
+  CommonUtils._internal();
 
-// for displaying snackbars
-showSnackBar(BuildContext context, String text) {
-  return ScaffoldMessenger.of(context).showSnackBar(
-    SnackBar(
-      content: Text(text),
-    ),
-  );
+  static CommonUtils instance = CommonUtils._internal();
+  showSnackBar(BuildContext context, String text) {
+    return ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        backgroundColor: Colors.green,
+        content: Text(text),
+      ),
+    );
+  }
 }

@@ -18,14 +18,14 @@ class _CircularIndicatorState extends State<CircularIndicator> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
-        children: [
+        children: const [
           SizedBox(
-            child: const CircularProgressIndicator(
+            width: 25,
+            height: 25,
+            child: CircularProgressIndicator(
               strokeWidth: 3,
               color: Colors.blue,
             ),
-            width: 15,
-            height: 15,
           ),
         ]);
   }
